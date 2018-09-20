@@ -1,0 +1,252 @@
+@font-face {
+	font-family: 'Berkshire Swash', cursive;
+	font-family: 'Lora', serif;
+}
+
+body {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;  
+	font-family: 'Lora', serif;
+	color: #5B5B62;
+	margin: 0;
+	padding: 30px;
+	background: url("../asset/flamingoBackground01.jpg");
+	background-size: cover;
+    background-repeat: repeat;
+    background-position: top; 
+}
+
+h1 {
+	font-family:'Berkshire Swash', cursive;
+}
+
+#generateur, #msgAccueil div, #msgAurevoir div, form, .histoire {
+	box-shadow: 0px 0px 10px #D2C7C7;
+}
+
+#generateur, #msgAccueil div, #msgAurevoir div {
+	background-color: rgba(255, 254, 254, 0.85);
+	border-radius: 5px;
+}
+
+form, .histoire {
+	background: #FFF;
+}
+
+#generateur, #msgAurevoir {
+	display:none;
+}
+
+#msgAccueil, #msgAurevoir {
+	padding: 15vh 20vw;
+}
+
+#msgAccueil div, #msgAurevoir div {	
+	text-align: center;
+	padding: 60px 80px;
+}
+
+#msgAccueil div h1::after, #msgAurevoir div h1::after {
+	content: " ";
+	display: block;
+	width: 70%;
+	margin: 25px 15%;
+	text-align: center;
+	height: 1.5px;
+	background-color: #5B5B62;
+}
+
+#msgAccueil span, #msgAurevoir span {
+	padding: 10px 25px;
+	cursor: pointer;
+}
+
+#msgAccueil p:last-child, #msgAurevoir p:last-child {
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+#generateur {
+	position: relative;
+	padding: 40px;
+	height: auto;
+}
+
+#generateur h1 {
+	padding-left: 20px;
+	margin-top: 40px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+	font-size: 0.8rem;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+#histoires {
+	height: auto;
+	overflow: auto;	
+}
+
+.histoire, h6 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.histoire {
+	letter-spacing: 0.1rem;
+	padding: 5px 10px;
+	margin-bottom: 8px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.titreIntro {
+	text-align:center;
+}
+
+#close span{
+	font-family: sans-serif;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px;
+	cursor: pointer;
+	color: #5B5B62;
+	border:1px solid transparent;
+	margin: 20px;
+	border-radius: 2px;
+}
+
+input[type=submit] {
+	font-family:'Berkshire Swash';
+	font-size:1.1rem;
+}
+
+input[type=submit], .bouton {
+	background-color:#BDBDBE;
+	color:#FFFEFE;
+	height:35px;
+	border:1px solid #BDBDBE;
+	margin-bottom: 0;
+	border-radius:2px;
+	vertical-align: middle;
+}
+
+input:focus {
+	outline:none;
+	-webkit-outline:none;
+}
+
+.radio-group {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#radio input, .radio-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#radio label {
+  display: inline-block;
+  position: relative;
+  color: #BDBDBE;
+  width: 20px;
+  height: 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #BDBDBE;
+  line-height: 30px;
+}
+
+.checkmark {
+	cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border:1px solid #BDBDBE;
+    border-radius: 50%;
+}
+
+.radio-group input:hover ~ .checkmark, #radio label:hover, #close span:hover, .bouton:hover {
+	color:#FFF;
+	border:1px solid #D2C7C7;
+	background-color: #D2C7C7;
+	transition: 0.1s ease;
+}
+
+.radio-group input:checked ~ .checkmark, #radio input:checked + label {
+	color:#FFF;
+	border:1px solid #BDBDBE;
+    background-color: #BDBDBE;
+    transition: 0.1s ease;
+}
+
+input[type=submit]:active {
+	color:#FFF;
+	border:1px solid #D2C7C7;
+	background-color: #D2C7C7;
+}
+
+/*** Media Queries ***/
+@media all and (min-width:544px) and (max-width: 768px) {
+	#msgAurevoir, #msgAccueil {
+		padding:7.5vh 50px;
+	}
+
+	#msgAurevoir div, #msgAccueil div {
+		padding:50px 65px;
+	}
+
+	h1 {
+		font-size:2.2rem;
+	}
+
+	p {
+		font-size:0.9rem;
+	}
+
+}
+
+@media all and (max-width: 544px) {
+	body {
+		padding:8px;
+	}
+
+	#msgAurevoir, #msgAccueil {
+		padding:7.5vh 10vw;
+	}
+
+	#msgAurevoir div, #msgAccueil div {
+		padding:40px 50px;
+	}
+
+	h1 {
+		font-size:2rem;
+	}
+
+	p {
+		font-size:0.8rem;
+	}
+
+	#generateur {
+		padding:25px;
+	}
+}
