@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Required meta tags -->
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  		<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 		
+		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/generateur.css" />
+
+		<title>Générateur de citations</title>
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			
+			<div class="row" id="msgAccueil">
+				<div>
+					<h1>Contes de l'absurde</h1>
+					<p>Sur le modèle des cadavres exquis, ce générateur crée aléatoirement de courtes histoires absurdes, peuplées d'impalas, de balbuzards et de sirènes. Pour le fun.
+					<p>						
+						<span class="bouton">Continuez &rarr;</span>
+					</p>
+				</div>
+			</div>
+
+			<div id="generateur">
+
+				<div class="row" id="close">
+					<span>X</span>
+				</div>
+
+				<div class="row">
+					<h1>Il était une fois...</h1>
+				</div>
+
+				<hr>
+
+				<div class="row">
+
+					<div class="col-md-4" id="formulaire">
+						
+						<form>
+							<h6>Genre de l'histoire</h6>
+							<div>
+								<label for="classique" class="radio-group">
+									Conte classique
+									<input type="radio" name="categorie" value="classique" id="classique" checked="checked">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div>
+								<label for="fantastique" class="radio-group">
+									Conte fantastique
+									<input type="radio" name="categorie" value="fantastique" id="fantastique">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div>
+								<h6>Nombre d'histoires</h6>
+								<p id="radio">
+									<input type="radio" id="nb1" name="nombre" value=1 checked="checked" /><label for="nb1">1</label>
+									<input type="radio" id="nb2" name="nombre" value=2 /><label for="nb2">2</label>
+									<input type="radio" id="nb3" name="nombre" value=3 /><label for="nb3">3</label>
+									<input type="radio" id="nb4" name="nombre" value=4 /><label for="nb4">4</label>
+									<input type="radio" id="nb5" name="nombre" value=5 /><label for="nb5">5</label>
+								</p>
+							</div>	
+							<input type="submit" value="Lire">
+						</form>
+
+					</div>
+
+					<div class="col-md-8" id="histoires">
+					</div>
+
+				</div>
+					
+			</div>
+
+			<div class="row" id="msgAurevoir">
+				<div>
+					<h1>Merci de votre visite</h1>
+					<p>À bientôt pour de nouvelles aventures !</p>
+					<p>
+						<span class="bouton">&larr; Retour</span>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="jquery/jquery-3.3.1.min.js"></script>
+    	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		
+		<script type="text/javascript" src="js/generateur.js"></script>
+	</body>
+
+</html>
